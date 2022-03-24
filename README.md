@@ -1,5 +1,5 @@
 # nsis4j
-fork from https://gitee.com/china_jeffery/nsis4j
+forked from https://gitee.com/china_jeffery/nsis4j
 
 - 之前我们通过 `NSIS` 来包装成普通界面安装包，那我们在软件市场上看到那些靓丽的界面安装界面是怎么来的，基于`Duilib`的软件不完全列表
 
