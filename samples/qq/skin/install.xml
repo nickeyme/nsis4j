@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="540,400" sizebox="0,0,0,0" roundcorner="11,11" caption="0,0,0,30" showdirty="false">
+  <Font name="微软雅黑" size="13" bold="false" default="true" />
+  <Font name="微软雅黑" size="13" bold="true" />
+  <Default name="VScrollBar" value="railnormalimage=&quot;file='scrollbar.png' source='0,90,18,109'&quot; railpushedimage=&quot;file='scrollbar.png' source='18,90,36,109'&quot; button1normalimage=&quot;file='scrollbar.png' source='0,0,18,18'&quot; button1pushedimage=&quot;file='scrollbar.png' source='18,0,36,18'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,36,18,54'&quot; button2pushedimage=&quot;file='scrollbar.png' source='18,36,36,54'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,55,18,90' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='18,55,36,91' corner='0,2,0,2'&quot; bkcolor=&quot;#FFF1F6ED&quot;" />
+
+  <VerticalLayout>
+    <TabLayout name="wizardTab" width="540" height="400">
+      <!-- 许可 -->
+      <VerticalLayout name="vrlLicense" width="540" height="400" bkimage="license_bk.png">
+        <VerticalLayout height="98">
+            <HorizontalLayout height="32">
+                <HorizontalLayout width="200">
+                    <Label float="true" pos="10,5,=200,=15" text="腾讯QQ安装向导" font="1" />
+                </HorizontalLayout>
+                <HorizontalLayout />
+                <HorizontalLayout width="67">
+                    <Button name="btnLicenseMin" float="true" pos="0,0,=28,=20" normalimage="min_normal.png" hotimage="min_hot.png" pushedimage="min_pushed.png" />
+                    <Button name="btnLicenseClose" float="true" pos="28,0,=39,=20"  normalimage="close_normal.png" hotimage="close_hot.png" pushedimage="close_pushed.png" />
+                </HorizontalLayout>
+            </HorizontalLayout>
+            <HorizontalLayout height="30">
+                <Label float="true" pos="12,0,44,30" text="欢迎" font="1" textcolor="0xFFFFFFFF"/>
+                <Label float="true" pos="56,0,88,30" text="选项"/>
+                <Label float="true" pos="100,0,132,30" text="选择"/>
+                <Label float="true" pos="144,0,176,30" text="安装"/>
+                <Label float="true" pos="188,0,220,30" text="完成"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="2">
+                <Container float="true" pos="10,0,=35,=2" bkimage="bottom.png" />
+            </HorizontalLayout>
+            <HorizontalLayout height="34">
+                <Label float="true" pos="13,5,540,27" text="在安装软件之前，请仔细阅读下面的软件许可协议和青少年上网安全指引。" />
+            </HorizontalLayout>
+        </VerticalLayout>
+        
+        <HorizontalLayout height="218">
+          <RichEdit name="editLicense" float="true" pos="13,0,=525,=218" autovscroll="true" vscrollbar="true"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="50">
+          <CheckBox name="chkAgree" float="true" pos="13,14,540,36" align="left" textpadding="18,1,0,0" selected="false" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="我已阅读并同意软件许可协议和青少年上网安全指引"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="34">
+          <HorizontalLayout />
+          <HorizontalLayout width="150">
+            <Button name="btnLicenseNext" float="true" pos="0,9,=69,=22" text="下一步" shortcut="N" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+            <Button name="btnLicenseCancel" float="true" pos="74,9,=69,=22" text="取消" shortcut="C" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <!-- 安装目录 -->
+      <VerticalLayout name="vrlSelectDir" width="540" height="400" bkimage="finish_bk.png">
+        <HorizontalLayout height="32">
+          <HorizontalLayout width="200">
+            <Label float="true" pos="10,5,=200,=15" text="腾讯QQ安装向导" font="1" />
+          </HorizontalLayout>
+          <HorizontalLayout />
+          <HorizontalLayout width="67">
+            <Button name="btnDirMin" float="true" pos="0,0,=28,=20" normalimage="min_normal.png" hotimage="min_hot.png" pushedimage="min_pushed.png" />
+            <Button name="btnDirClose" float="true" pos="28,0,=39,=20"  normalimage="close_normal.png" hotimage="close_hot.png" pushedimage="close_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="30">
+          <Label float="true" pos="12,0,44,30" text="欢迎" />
+          <Label float="true" pos="56,0,88,30" text="选项"/>
+          <Label float="true" pos="100,0,132,30" text="选择" font="1" textcolor="0xFFFFFFFF"/>
+          <Label float="true" pos="144,0,176,30" text="安装"/>
+          <Label float="true" pos="188,0,220,30" text="完成"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="2">
+          <Container float="true" pos="95,0,=35,=2" bkimage="bottom.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="20"/>
+        <HorizontalLayout height="18">
+            <Label float="true" pos="20,0,110,18" text="程序安装目录" />
+            <Container float="true" pos="112,8,520,10" bkimage="line.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="27">
+            <Edit name="editDir" float="true" pos="38,5,=300,=22" text="" />
+            <Button name="btnSelectDir" float="true" pos="340,5,=69,=22" text="浏览(B)" shortcut="B" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="23">
+            <Label name="lblSpace" float="true" pos="38,5,=300,=18" text="所需空间: 10.0M   可用空间: 30.0G" />
+        </HorizontalLayout>
+        <HorizontalLayout height="20" />
+        <HorizontalLayout height="18">
+            <Label float="true" pos="20,0,110,18" text="个人文件夹" />
+            <Container float="true" pos="112,8,520,10" bkimage="line.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="28">
+            <Label float="true" pos="38,5,540,=18" text="选择个人文件夹（用于保存消息记录等数据）的保存位置。" />
+        </HorizontalLayout>
+        <HorizontalLayout height="76">
+            <VerticalLayout>
+                <Option name="opt1" float="true" pos="38,0,540,22" align="left" group="opt" textpadding="18,1,0,0" selected="false" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="保存到安装目录下（Vista、windows7或更高版本的系统不支持此选项）"/>
+                <Option name="opt2" float="true" pos="38,27,540,49" align="left" group="opt" textpadding="18,1,0,0" selected="true" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="保存到“我的文档”（推荐）"/>
+                <Option name="opt3" float="true" pos="38,54,540,76" align="left" group="opt" textpadding="18,1,0,0" selected="false" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="自定义"/>
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="70" />
+        <HorizontalLayout height="34">
+          <HorizontalLayout />
+          <HorizontalLayout width="225">
+            <Button name="btnDirPre" float="true" pos="0,6,=69,=22" text="上一步(P)" shortcut="P" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+            <Button name="btnDirInstall" float="true" pos="74,6,=69,=22" text="安装(I)" shortcut="I" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+            <Button name="btnDirCancel" float="true" pos="148,6,=69,=22" text="取消(C)" shortcut="C" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <!-- 进度 -->
+      <VerticalLayout name="vrlDetail" width="540" height="400" bkimage="detail_bk.png">
+        <HorizontalLayout height="32">
+          <HorizontalLayout width="200">
+            <Label float="true" pos="10,5,=200,=15" text="腾讯QQ安装向导" font="1" />
+          </HorizontalLayout>
+          <HorizontalLayout />
+          <HorizontalLayout width="67">
+            <Button name="btnDetailMin" float="true" pos="0,0,=28,=20" normalimage="min_normal.png" hotimage="min_hot.png" pushedimage="min_pushed.png" />
+            <Button name="btnDetailClose" float="true" pos="28,0,=39,=20"  normalimage="close_normal.png" hotimage="close_hot.png" pushedimage="close_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="30">
+          <Label float="true" pos="12,0,44,30" text="欢迎" />
+          <Label float="true" pos="56,0,88,30" text="选项"/>
+          <Label float="true" pos="100,0,132,30" text="选择"/>
+          <Label float="true" pos="144,0,176,30" text="安装" font="1" textcolor="0xFFFFFFFF"/>
+          <Label float="true" pos="188,0,220,30" text="完成"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="2">
+          <Container float="true" pos="141,0,=35,=2" bkimage="bottom.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="298">
+          <ImageShow name="imgShow" float="true" pos="1,0,=538,=298" imagecount="6" images="img1.png img2.png img3.png img4.png img5.png img6.png " loop="true" />
+        </HorizontalLayout>
+        <HorizontalLayout height="4">
+          <Slider name="slrProgress" float="true" pos="0,0,540,4" foreimage="slider_value.png" thumbsize="0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="34">
+          <HorizontalLayout />
+          <HorizontalLayout width="230">
+            <Button name="btnDetailPre" float="true" pos="0,6,=69,=22" text="上一步" enabled="false" shortcut="P" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+            <Button name="btnDetailSetup" float="true" pos="74,6,=69,=22" text="安装" enabled="false" shortcut="C" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+            <Button name="btnDetailCancel" float="true" pos="148,6,=69,=22" text="取消" enabled="false" shortcut="C" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <!-- 完成 -->
+      <VerticalLayout name="vrlFinished" width="540" height="400" bkimage="finish_bk.png">
+        <HorizontalLayout height="32">
+          <HorizontalLayout width="200">
+            <Label float="true" pos="10,5,=200,=15" text="腾讯QQ安装向导" font="1" />
+          </HorizontalLayout>
+          <HorizontalLayout />
+          <HorizontalLayout width="67">
+            <Button name="btnFinishedMin" float="true" pos="0,0,=28,=20" normalimage="min_normal.png" hotimage="min_hot.png" pushedimage="min_pushed.png" />
+            <Button name="btnFinishedClose" float="true" pos="28,0,=39,=20"  normalimage="close_normal.png" hotimage="close_hot.png" pushedimage="close_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="30">
+          <Label float="true" pos="12,0,44,30" text="欢迎" />
+          <Label float="true" pos="56,0,88,30" text="选项"/>
+          <Label float="true" pos="100,0,132,30" text="选择"/>
+          <Label float="true" pos="144,0,176,30" text="安装"/>
+          <Label float="true" pos="188,0,220,30" text="完成"  font="1" textcolor="0xFFFFFFFF"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="2">
+          <Container float="true" pos="184,0,=35,=2" bkimage="bottom.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="20"/>
+        <HorizontalLayout height="18">
+            <Label float="true" pos="20,0,85,18" text="安装完成" />
+            <Container float="true" pos="87,8,520,10" bkimage="line.png" />
+        </HorizontalLayout>
+        <HorizontalLayout height="105">
+          <VerticalLayout>
+            <CheckBox name="chkBootStart" float="true" pos="36,5,290,27" align="left" textpadding="18,1,0,0" selected="true" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="开机时自动启动腾讯QQ"/>
+            <CheckBox name="chkStartNow" float="true" pos="36,30,290,52" align="left" textpadding="18,1,0,0" selected="true" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="立即运行腾讯QQ"/>
+            <CheckBox name="chkSetHomePage" float="true" pos="36,55,290,77" align="left" textpadding="18,1,0,0" selected="true" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="设置QQ导航为主页"/>
+            <CheckBox name="chkShowFeature" float="true" pos="36,80,290,102" align="left" textpadding="18,1,0,0" selected="true" normalimage="file='check_normal.png' source='0,0,13,13' dest='0,4,13,17'" normalhotimage="file='check_hover.png' source='0,0,13,13' dest='0,4,13,17'" selectedimage="file='check_select.png' source='0,0,13,13' dest='0,4,13,17'" selectedhotimage="file='check_select_hover.png' source='0,0,13,13' dest='0,4,13,17'" text="显示新特性"/>
+          </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="160" />
+        <HorizontalLayout height="34">
+          <HorizontalLayout />
+          <HorizontalLayout width="79">
+            <Button name="btnFinished" float="true" pos="0,6,=69,=22" text="完成(F)" enabled="true" shortcut="F" normalimage="btn_hot.png" hotimage="btn_hot.png" pushedimage="btn_pushed.png" />
+          </HorizontalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Window>
